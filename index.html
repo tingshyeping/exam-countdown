@@ -238,9 +238,9 @@
                 motivationText.textContent = "即将到达终点，坚持住！";
             } else if (days === 1) {
                 motivationText.textContent = "明天就是考试日，好好休息，保持最佳状态！";
-            } else if (days === 0) {
+            } else if (days > -7 && days < 0) {
                 motivationText.textContent = "今天就是考试日，相信自己，加油！";
-            } else {
+            } else if (days === 7) {
                 motivationText.textContent = "考试已结束，恭喜完成！";
             }
         }
@@ -252,4 +252,5 @@
         setInterval(updateCountdown, 1000);
     </script>
 </body>
+
 </html>
